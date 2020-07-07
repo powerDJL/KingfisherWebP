@@ -39,7 +39,7 @@ extension Kingfisher where Base: Image {
 
 // MARK: - Create image from WebP data
 extension Kingfisher where Base: Image {
-    static func image(webpData: Data, scale: CGFloat, onlyFirstFrame: Bool) -> Image? {
+    public static func image(webpData: Data, scale: CGFloat, onlyFirstFrame: Bool) -> Image? {
         let frameCount = WebPImageFrameCountGetFromData(webpData as CFData)
         if (frameCount == 0) {
             return nil
